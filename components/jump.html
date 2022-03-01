@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="jump.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>
+        Save the Blind man getting hit by the Truck.
+        <br />
+        Click to Jump the man.
+      </h1>
+    </div>
+    <div class="mobile">
+      <div class="game">
+        <div class="music">
+          <audio
+            src="assets/truck.mp3"
+            id="truckSound"
+            preload="auto"
+            type="audio/mpeg"
+          ></audio>
+          <audio
+            src="assets/horn.mp3"
+            id="hornSound"
+            preload="auto"
+            type="audio/mpeg"
+          ></audio>
+          <audio
+            src="assets/scream.mp3"
+            id="screamSound"
+            preload="auto"
+            type="audio/mpeg"
+          ></audio>
+        </div>
+        <div id="character">
+          <i class="fa fa-blind fa-4x"></i>
+        </div>
+        <div>
+          <i class="fa fa-truck fa-4x" id="block"></i>
+        </div>
+      </div>
+    </div>
+    <div class="watch">
+        <div class="watchHook"></div>
+      <div class="watchStrapLeft"></div>
+      <div class="watchFace">
+        <h4>Score: <span id="scoreSpan"></span></h4>
+        <h4>High Score: <span id="highScore"></span></h4>
+      </div>
+      <div class="watchStrapRight"></div>
+    </div>
+
+   
+    <script src="jump.js"></script>
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
