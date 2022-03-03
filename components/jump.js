@@ -1,38 +1,41 @@
-var character = document.getElementById("character");
-var block = document.getElementById("block");
+var blind = document.getElementById("blind");
+var truck = document.getElementById("truck");
 var counter = 0;
+
+//to jump man by pressing any key
 document.body.onkeyup = function jump(e) {
-  if (character.classList == "animate" && e.keyCode === "Spacebar") {
+  if (blind.classList == "animate" && e.keyCode === "Spacebar") {
     return;
   }
-  document.getElementById("truckSound").play();
   document.getElementById("screamSound").pause();
-  character.classList.add("animate");
+  blind.classList.add("animate");
   setTimeout(function () {
-    character.classList.remove("animate");
+    blind.classList.remove("animate");
     document.getElementById("hornSound").play();
   }, 400);
 };
+
+// to check hit
 var checkDead = setInterval(function () {
-  let characterTop = parseInt(
-    window.getComputedStyle(character).getPropertyValue("top")
+  let blindTop = parseInt(
+    window.getComputedStyle(blind).getPropertyValue("top") //to get the top portion of blind
   );
-  let blockLeft = parseInt(
-    window.getComputedStyle(block).getPropertyValue("left")
+  let truckLeft = parseInt(
+    window.getComputedStyle(truck).getPropertyValue("left") //to get the left portion of truck
   );
-  if (blockLeft < 30 && blockLeft > -30 && characterTop >= 130) {
-    block.style.animation = "none";
+  if (truckLeft < 30 && truckLeft > -30 && blindTop >= 130) {
+    truck.style.animation = "none";
     document.getElementById("screamSound").play();
-    document.getElementById("truckSound").pause();
     document.getElementById("hornSound").pause();
 
     alert(
-      "You've hit the Blind man. Drive carefully! score: " +
+      "You've hit the Chintu. Drive carefully! score: " +
         Math.floor(counter / 100)
     );
     counter = 0;
     document.getElementById("screamSound").pause();
-    block.style.animation = "block 1s infinite linear";
+    //to move truck from right to left
+    truck.style.animation = "truck 1s infinite linear";
     document.getElementById("highScore").innerHTML = Math.max(
       document.getElementById("scoreSpan").innerHTML
     );

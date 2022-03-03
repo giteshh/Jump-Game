@@ -16,22 +16,16 @@
     />
   </head>
   <body>
-    <div class="heading">
-      <h1>
-        Save the Blind man getting hit by the Truck.
+    <div class="main">
+      <div class="heading">
+        <h1>The Didi vs Chintu</h1>
+        <h3>Save the Chintu getting hit by Papa ki Pari.</h3>
         <br />
-        Click to Jump the man.
-      </h1>
-    </div>
-    <div class="mobile">
-      <div class="game">
+        <p>Press any key to Jump the man.</p>
+      </div>
+
+      <div class="game mt-5">
         <div class="music">
-          <audio
-            src="assets/truck.mp3"
-            id="truckSound"
-            preload="auto"
-            type="audio/mpeg"
-          ></audio>
           <audio
             src="assets/horn.mp3"
             id="hornSound"
@@ -45,25 +39,25 @@
             type="audio/mpeg"
           ></audio>
         </div>
-        <div id="character">
-          <i class="fa fa-blind fa-4x"></i>
+        <div id="blind">
+          <img src="assets/blind.png" style="width: 130px; height: 130px" />
+          <!-- <i class="fa fa-blind fa-4x"></i> -->
         </div>
         <div>
-          <i class="fa fa-truck fa-4x" id="block"></i>
+          <img
+            src="assets/scooty.png"
+            id="truck"
+            style="width: 160px; height: 150px"
+          />
+          <!-- <i class="fa fa-truck fa-4x" id="truck"></i> -->
         </div>
       </div>
-    </div>
-    <div class="watch">
-        <div class="watchHook"></div>
-      <div class="watchStrapLeft"></div>
-      <div class="watchFace">
+
+      <div class="mt-4">
         <h4>Score: <span id="scoreSpan"></span></h4>
         <h4>High Score: <span id="highScore"></span></h4>
       </div>
-      <div class="watchStrapRight"></div>
     </div>
-
-   
     <script src="jump.js"></script>
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
